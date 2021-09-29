@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<personne nom="KHARBOUCH">
+    <dateNaissance>
+        <annee>2000</annee>
+        <jour>24</jour>
+        <mois>2</mois>
+    </dateNaissance>
+    <prenom>Chaimae</prenom>
+</personne>
