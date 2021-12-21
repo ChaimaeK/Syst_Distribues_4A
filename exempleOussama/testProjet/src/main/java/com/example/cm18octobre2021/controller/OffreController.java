@@ -4,25 +4,21 @@ import com.example.cm18octobre2021.dao.PublicationInterface;
 import com.example.cm18octobre2021.entities.Offre;
 import com.example.cm18octobre2021.entities.Publication;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Optional;
 
 
 @RestController
 
-public  class OffreController  {
+public class OffreController {
     @Autowired
     private OffreInterface offreInterface;
 
     @GetMapping(value="/offres")
-    @CrossOrigin(origins="http://localhost:4200/")
-    public List<Offre> getAllOffre(){
-        List<Offre> offreCollections = offreInterface.findAll();
+    public Iterable<Offre> getAllOffre(){
+        Iterable<Offre> offreCollections = offreInterface.findAll();
         return offreCollections;
     }
 
@@ -41,7 +37,6 @@ public  class OffreController  {
         return offreInterface.save(newoffre);
     }
     @DeleteMapping("/offres/{idPub}")
-    @CrossOrigin(origins="http://localhost:4200/")
     public void delete(@PathVariable long idPub){
         offreInterface.deleteById(idPub);
     }
@@ -51,7 +46,6 @@ public  class OffreController  {
         offre.setIdPub(idPub);
         return  offreInterface.save(offre);
     }
-
 /*
     @PostMapping(value = "/offres")
     public Offre addOffre ( @RequestParam(value = "acteurId") long acteurId,

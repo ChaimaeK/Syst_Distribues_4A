@@ -20,7 +20,7 @@ public class Reservation {
     @OneToMany
     private Offre offre;*/
 
-    private Demandeur demandeur;
+    private User user;
 
 
 }
