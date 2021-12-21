@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading"> Listes des offres
+      <div class="panel-body">
+        <button class="btn btn-primary" (click)="onGetOffres()">Offres</button>
+      </div>
+      <div class="panel-body">
+
+        <table *ngIf="offres" class="table table-striped">
+          <tr>
+            <th>IdPub</th><th>Name</th><th>Texte</th><th>Date </th><th>Online</th><th>Type</th><th>Prix</th><th>ActeurId</th>
+          </tr>
+          <tr *ngFor="let o of offres">
+            <td>{{o.idPub}}</td>
+            <td>{{o.name}}</td>
+            <td>{{o.text}}</td>
+            <td>{{o.created }}</td>
+            <td>{{o.online}}</td>
+            <td>{{o.type}}</td>
+            <td>{{o.prix}}</td>
+            <td>{{o.acteurId}}</td>
+            <a class="btn btn-danger" (click)="onDeleteOffre(o.idPub)">Delete</a>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

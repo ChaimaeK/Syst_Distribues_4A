@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" ><img src="https://logos-world.net/wp-content/uploads/2021/11/Meta-Symbol.png" height="80px" width="200px"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/offres">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Depot_DemandeV2.html">Deposer une demande</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Depot_OffreV2.html">Déposer une offre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Aide</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <div class="px-5" style="width: 200px;" >
+        <div class="btn-group">
+          <a href="ConnexionV2.html" class="btn btn-info" aria-current="page">Connexion</a>
+          <a href="InscriptionV2.html" class="btn btn-primary">Inscription</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div><router-outlet></router-outlet></div>
