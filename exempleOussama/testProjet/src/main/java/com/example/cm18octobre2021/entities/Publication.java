@@ -21,6 +21,7 @@ public abstract class Publication {
     private  long idPub;
     private String name;
     private String text;
+    //@GeneratedValue(strategy = GenerationType.DATE)
     private Date created;
     private Boolean online;
     private String type;

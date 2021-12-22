@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading"> Listes des demandes
+      <div class="panel-body">
+        <button class="btn btn-primary" (click)="onGetDemandes()">Demandes</button>
+      </div>
+      <div class="panel-body">
+
+        <table *ngIf="demandes" class="table table-striped">
+          <tr>
+            <th>IdPub</th><th>Name</th><th>Texte</th><th>Date </th><th>Online</th><th>Type</th>
+          </tr>
+          <tr *ngFor="let o of demandes">
+            <td>{{o.idPub}}</td>
+            <td>{{o.name}}</td>
+            <td>{{o.text}}</td>
+            <td>{{o.created }}</td>
+            <td>{{o.online}}</td>
+            <td>{{o.type}}</td>
+            <a class="btn btn-danger" (click)="onDeleteDemande(o.idPub)">Delete</a>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
